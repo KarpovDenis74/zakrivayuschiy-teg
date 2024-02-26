@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+s<!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
@@ -534,6 +534,7 @@
           <span class="button__text">Like</span>
         </button>
       </div>
+
       <div class="save">
         <button
           type="button"
@@ -549,11 +550,14 @@
       </div>
 
       <dialog id="dialog-id" class="diskette">
-        <form>
         <ul class="diskette__floppy-text">
           <li>
             <svg
-              viewBox="0 0 39 39" class="diskette__floppy">
+              viewBox="0 0 39 39"
+              width="39px"
+              height="39px"
+              class="diskette__floppy"
+            >
               <use href="./svg/floppy.svg#floppy"></use>
             </svg>
           </li>
@@ -563,13 +567,13 @@
             >
           </li>
         </ul>
-        </form>
-        <form method="dialog">
-          <button class="diskette__button">
-                <span class="diskette__text">ОК</span>
-            </button>
-        </form> 
-        
+        <button
+          type="button"
+          class="diskette__button"
+          onclick="window['dialog-id'].close()"
+        >
+          <span class="diskette__text">ОК</span>
+        </button>
       </dialog>
     </main>
     <script src="./scripts/set-theme.js"></script>

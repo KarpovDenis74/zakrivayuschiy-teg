@@ -23,6 +23,9 @@
   color: var(--main-color, #000000);
   background-color: var(--main-bg-color, #ffffff);
   background-image: var(--fon);
+
+  /*background-repeat: repeat;
+  background-size: auto 4px;*/
   background-size: cover;
   background-attachment: fixed;
 }
@@ -186,8 +189,8 @@
 .content__card {
   background-color: var(--main-bg-color, #ffffff);
   border-block-start: 2px solid var(--main-color, #000000);
-  border-inline-end: 2px solid var(--main-color, #000000);
   border-inline-start: 2px solid var(--main-color, #000000);
+  border-inline-end: 2px solid var(--main-color, #000000);
 }
 
 .content__card:not(:first-child) {
@@ -210,7 +213,6 @@
   font-size: 18px;
   line-height: 121%;
   text-align: start;
-  border-block-end: 2px solid var(--main-color, #000000);
 }
 
 @media (width > 375px) {
@@ -292,10 +294,13 @@
 }
 
 .content__card-image-picture {
+  border-block-start: 2px solid var(--main-color, #000000);
   inline-size: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1/1;
   object-fit: cover;
   object-position: center;
+  border-block-start: 2px solid var(--main-color, #000000);
+  border-block-end: 2px solid var(--main-color, #000000);
 }
 
 .content__card-text {
@@ -535,7 +540,7 @@
 .diskette[open] .diskette__button {
   background-color: var(--main-bg-color, #ffffff);
   color: var(--main-color, #000000);
-  min-inline-size: 296px;
+  inline-size: 100%;
   border: 2px solid var(--main-color, #000000);
   text-align: center;
   cursor: pointer;
